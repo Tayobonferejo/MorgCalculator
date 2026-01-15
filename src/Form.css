@@ -1,0 +1,21 @@
+
+
+form > label {
+    display: block;
+}
+
+input {
+    margin: 5px 0;
+    padding: 5px 0;
+    /* border: 3px solid blue; */
+}
+.heading, .morgage-div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 3px solid blue;
+}
+
+.morgage-input {
+    width: 100%;
+}

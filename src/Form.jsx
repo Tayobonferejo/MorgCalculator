@@ -1,16 +1,19 @@
+import "./Form.css"
+
 function Form () {
   return(
-    <>  <div>
-            <h1>Morgage Calculator</h1>
+    <div>  
+        <div className="heading">
+            <h3>Morgage Calculator</h3>
             <p><a href="#">Clear All</a></p>
         </div>
         <form>
-            <label>Morgage Amount</label>
-            <input type="number" placeholder="morgage amount" required/>
-            <div>
+            <label className="label" >Morgage Amount</label>
+            <input type="number" placeholder="morgage amount" required className="morgage-input"/>
+            <div className="morgage-div">
                 <div>
-                    <label>Morgage Term</label>
-                    <div>
+                    <label className="label">Morgage Term</label>
+                    <div className="number-div">
                         <input type="number" placeholder="morgage term" required/>
                     </div>
                 </div>
@@ -20,6 +23,7 @@ function Form () {
                         <input type="number" placeholder="interest rate" required/>
                     </div>
                 </div>
+            </div>
                 <div>
                     <label>Morgage Type</label>
                     <div>
@@ -28,13 +32,12 @@ function Form () {
                     </div>
                     <div>
                         <input type="radio" name="morgagetype" value="interest" />
-                        <label>Repayment</label>
+                        <label>Interest Only</label>
                     </div>
                 </div>
                 <button>Calculate Repayments</button>
-            </div>
         </form>
-    </>
+    </div>
   )
 }
 
