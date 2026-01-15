@@ -13,9 +13,16 @@ input {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border: 3px solid blue;
 }
 
 .morgage-input {
     width: 100%;
 }
+
+.radio-div {
+    padding: 5px ;
+    border: 1px solid blue; 
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+

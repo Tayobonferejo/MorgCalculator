@@ -26,11 +26,11 @@ function Form () {
             </div>
                 <div>
                     <label>Morgage Type</label>
-                    <div>
+                    <div className="radio-div">
                         <input type="radio" name="morgagetype" value="Repayment" />
                         <label>Repayment</label>
                     </div>
-                    <div>
+                    <div className="radio-div">
                         <input type="radio" name="morgagetype" value="interest" />
                         <label>Interest Only</label>
                     </div>
