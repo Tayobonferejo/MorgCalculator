@@ -8,19 +8,19 @@ function Form () {
             <p><a href="#">Clear All</a></p>
         </div>
         <form>
-            <label className="label" >Morgage Amount</label>
-            <input type="number" placeholder="morgage amount" required className="morgage-input"/>
+            <label className="label">Morgage Amount</label>
+            <input type="number" min="0" placeholder="morgage amount" required className="morgage-input"/>
             <div className="morgage-div">
                 <div>
                     <label className="label">Morgage Term</label>
                     <div className="number-div">
-                        <input type="number" placeholder="morgage term" required/>
+                        <input type="number" min="0" placeholder="morgage term" required/>
                     </div>
                 </div>
                 <div>
                     <label>Interest Rate</label>
                     <div>
-                        <input type="number" placeholder="interest rate" required/>
+                        <input type="number" min="0" placeholder="interest rate" required/>
                     </div>
                 </div>
             </div>
