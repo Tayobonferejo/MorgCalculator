@@ -2,7 +2,7 @@ import "./Form.css"
 
 function Form () {
   return(
-    <div>  
+    <div className="form">
         <div className="heading">
             <h3>Morgage Calculator</h3>
             <p><a href="#">Clear All</a></p>
@@ -24,17 +24,17 @@ function Form () {
                     </div>
                 </div>
             </div>
-                <div>
-                    <label>Morgage Type</label>
-                    <div className="radio-div">
-                        <input type="radio" name="morgagetype" value="Repayment" />
-                        <label>Repayment</label>
-                    </div>
-                    <div className="radio-div">
-                        <input type="radio" name="morgagetype" value="interest" />
-                        <label>Interest Only</label>
-                    </div>
+            <div>
+                <label>Morgage Type</label>
+                <div className="radio-div">
+                    <input type="radio" name="morgagetype" value="Repayment" />
+                    <label>Repayment</label>
                 </div>
+                <div className="radio-div">
+                    <input type="radio" name="morgagetype" value="interest" />
+                    <label>Interest Only</label>
+                </div>
+            </div>
                 <button>Calculate Repayments</button>
         </form>
     </div>

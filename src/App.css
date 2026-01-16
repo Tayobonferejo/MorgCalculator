@@ -10,7 +10,12 @@ body {
     background-color: #f5f7fa;
     padding: 40px 20px;
     min-height: 100vh;
+    border: 2px solid goldenrod;
+}
+
+body, main {
     display: flex;
     justify-content: center;
     align-items: center;
+    border: 2px solid goldenrod;
 }
