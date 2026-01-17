@@ -1,0 +1,21 @@
+
+.result-div {
+    background-color: rgb(2, 2, 41);
+    border-radius: 0 15px  15px 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    
+}
+
+.result-div > p {
+    line-height: 20px;
+    text-align: center;
+    opacity: 50%;
+}
+
+.result-div > h2 {
+    padding: 15px 0;
+}

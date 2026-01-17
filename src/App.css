@@ -8,14 +8,31 @@
 
 body {
     background-color: #f5f7fa;
-    padding: 40px 20px;
     min-height: 100vh;
-    border: 2px solid goldenrod;
+    
 }
 
 body, main {
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 2px solid goldenrod;
+}
+
+main {
+    margin: 0 auto;
+    width: 800px;
+    border-radius: 15px;
+    height: 70vh;
+    background-color: white;
+}
+
+main > div {
+    width: 50%;
+    padding: 2rem;
+    height: 70vh;
+}
+
+main > div:first-child {
+    border-radius: 15px 0 0 15px;
+    background-color: white;
 }
