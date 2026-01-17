@@ -7,6 +7,7 @@ input {
     margin: 5px 0;
     padding: 5px;
 }
+
 .heading {
     margin-bottom: 24px;
 }
@@ -18,13 +19,25 @@ input {
 }
 
 .morgage-input {
-    width: 100%;
+    width: 100%; 
+    margin-bottom: 1.5rem;
+    height: 40px;
 }
 
 .radio-div {
-    padding: 5px ;
+    padding: 8px ;
     border: 1px solid blue; 
     border-radius: 5px;
     margin-bottom: 5px;
+}
+
+.radio-div > input {
+    margin-right: 15px;
+}
+
+.morgage-unit {
+    margin-bottom: 1.5rem;
+    width: 90px;
+    height: 40px;
 }
 

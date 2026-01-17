@@ -14,13 +14,13 @@ function Form () {
                 <div>
                     <label className="label">Morgage Term</label>
                     <div className="number-div">
-                        <input type="number" min="0" placeholder="morgage term" required/>
+                        <input type="number" min="0" placeholder="term" required className="morgage-unit"/>
                     </div>
                 </div>
                 <div>
                     <label>Interest Rate</label>
                     <div>
-                        <input type="number" min="0" placeholder="interest rate" required/>
+                        <input type="number" min="0" placeholder="rate" required className="morgage-unit"/>
                     </div>
                 </div>
             </div>
