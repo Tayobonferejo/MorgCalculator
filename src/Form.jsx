@@ -1,12 +1,45 @@
 import "./Form.css"
 import { useState } from "react";
 
-function Form () {
+function Form ({ setMonthlyPayment }) {
 
     const [mortgageAmount, setMortgageAmount] = useState("");
     const [term, setTerm] = useState("");
     const [rate, setRate] = useState("");
     const [mortgageType, setMortgageType] = useState("");
+
+
+  const calculateMortgage = (e) => {
+    e.preventDefault();
+
+     console.log({
+                mortgageAmount,
+                term,
+                rate,
+                mortgageType,
+                });
+
+
+    const P = Number(mortgageAmount);
+    const annualRate = Number(rate);
+    const years = Number(term);
+
+    const r = annualRate / 100 / 12;
+    const n = years * 12;
+
+    let payment = 0;
+
+    if (mortgageType === "repayment") {
+      payment =
+        P *
+        ((r * Math.pow(1 + r, n)) /
+          (Math.pow(1 + r, n) - 1));
+    } else if (mortgageType === "interest") {
+      payment = P * r;
+    }
+
+    setMonthlyPayment(payment.toFixed(2));
+  };
 
   return(
     <div className="form">
@@ -22,15 +55,7 @@ function Form () {
             >Clear All</a></p>
         </div>
         <form 
-                onSubmit={(e) => {
-                e.preventDefault();
-                console.log({
-                mortgageAmount,
-                term,
-                rate,
-                mortgageType,
-                });
-            }}
+            onSubmit={calculateMortgage}
         >
             <label className="label">Morgage Amount</label>
             <input type="number" min="0" placeholder="morgage amount" required

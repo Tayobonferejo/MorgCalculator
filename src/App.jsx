@@ -5,10 +5,11 @@ import './App.css'
 
 function App() {
 
+  const [monthlyPayment, setMonthlyPayment] = useState(null);
   return (
     <main>
-      <Form/>
-      <Result/>
+      <Form setMonthlyPayment={setMonthlyPayment} />
+      <Result monthlyPayment={monthlyPayment} />
     </main>
   )
 }
