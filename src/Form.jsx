@@ -19,26 +19,44 @@ function Form ({ setMonthlyPayment }) {
                 mortgageType,
                 });
 
-
     const P = Number(mortgageAmount);
     const annualRate = Number(rate);
     const years = Number(term);
 
-    const r = annualRate / 100 / 12;
-    const n = years * 12;
+    const r = annualRate / 100 / 12; // monthly rate
+    const n = years * 12;            // total months
 
-    let payment = 0;
+    let monthlyPayment = 0;
+    let totalRepayment = 0;
+    let totalInterest = 0;
 
     if (mortgageType === "repayment") {
-      payment =
+    monthlyPayment =
         P *
         ((r * Math.pow(1 + r, n)) /
-          (Math.pow(1 + r, n) - 1));
+        (Math.pow(1 + r, n) - 1));
+
+    totalRepayment = monthlyPayment * n;
+    totalInterest = totalRepayment - P;
+
     } else if (mortgageType === "interest") {
-      payment = P * r;
+    monthlyPayment = P * r;
+
+    totalInterest = monthlyPayment * n;
+    totalRepayment = P + totalInterest;
     }
 
-    setMonthlyPayment(payment.toFixed(2));
+// optional rounding
+monthlyPayment = monthlyPayment.toFixed(2);
+totalRepayment = totalRepayment.toFixed(2);
+totalInterest = totalInterest.toFixed(2);
+
+    setMonthlyPayment({
+    monthlyPayment,
+    totalRepayment,
+    totalInterest
+});
+
   };
 
   return(
