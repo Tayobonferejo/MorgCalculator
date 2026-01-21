@@ -36,3 +36,27 @@ main > div:first-child {
     border-radius: 15px 0 0 15px;
     background-color: white;
 }
+
+@media (max-width: 768px) {
+  body,
+  main {
+    align-items: flex-start;
+  }
+
+  main {
+    flex-direction: column;
+    width: 100%;
+    min-height: 100vh;
+    border-radius: 0;
+  }
+
+  main > div {
+    width: 100%;
+    height: auto;
+    padding: 1.5rem;
+  }
+
+  main > div:first-child {
+    border-radius: 0;
+  }
+}
