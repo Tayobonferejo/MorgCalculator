@@ -6,9 +6,14 @@ import './App.css'
 function App() {
 
   const [monthlyPayment, setMonthlyPayment] = useState(null);
+
+   const showEmptyResult = () => {
+    setMonthlyPayment(null); // 🔥 THIS triggers your code
+  };
+
   return (
     <main>
-      <Form setMonthlyPayment={setMonthlyPayment} />
+      <Form setMonthlyPayment={setMonthlyPayment} showEmptyResult={showEmptyResult} />
       <Result monthlyPayment={monthlyPayment} />
     </main>
   )

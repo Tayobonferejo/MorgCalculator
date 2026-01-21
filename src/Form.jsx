@@ -1,7 +1,7 @@
 import "./Form.css"
 import { useState } from "react";
 
-function Form ({ setMonthlyPayment }) {
+function Form ({ setMonthlyPayment , showEmptyResult}) {
 
     const [mortgageAmount, setMortgageAmount] = useState("");
     const [term, setTerm] = useState("");
@@ -69,6 +69,7 @@ totalInterest = totalInterest.toFixed(2);
                 setTerm("");
                 setRate("");
                 setMortgageType("");
+                showEmptyResult();
             }}
             >Clear All</a></p>
         </div>
