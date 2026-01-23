@@ -119,7 +119,7 @@ totalInterest = totalInterest.toFixed(2);
                     <label>Interest Only</label>
                 </div>
             </div>
-                <button class="calc-btn">Calculate Repayments</button>
+                <button className="calc-btn">Calculate Repayments</button>
 
         </form>
     </div>
