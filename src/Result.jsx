@@ -22,16 +22,19 @@ function Result ({monthlyPayment}) {
   return (
     <div className="result-div">
       <h2>Your Results</h2>
-      <p>Your results are shown below based on the information to provided. To adjust the results, edit the form and click "calculate repayment" again </p>
+      <p>Your results are shown below based on the information to provided.
+         To adjust the results, edit the form and click "calculate repayment" again
+      </p>
+       <div className="result-card">
+          <p className="label">Your monthly repayments</p>
+          <h1 className="amount">₦{monthlyPayment.monthlyPayment}</h1>
 
-  
-        <div>
-          <p>Your monthly repayments</p>
-          <h1>₦{monthlyPayment.monthlyPayment}</h1>
-          <p>Total you'll reply over the term</p>
-          <p>${monthlyPayment.totalRepayment}</p>
+          <div className="divider"></div>
+
+          <p className="label">Total you'll repay over the term</p>
+          <p className="total">₦{monthlyPayment.totalRepayment}</p>
         </div>
-      </div>
+    </div>
   );
 
 }
